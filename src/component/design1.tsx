@@ -1,11 +1,11 @@
 import React from 'react'
 
-function design1() {
+function Design1() {
   return (
-    <div>
-      
+    <div className='flex justify-center '>
+       hello
     </div>
   )
 }
 
-export default design1
+export default Design1;
