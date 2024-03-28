@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 
 
-interface Data {
+export interface Data {
   name :string,
   icon :ReactNode, 
   color : string,
