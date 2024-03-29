@@ -1,4 +1,5 @@
 import List_2 from "./list_2";
+import React from "react";
 import {Data} from "./list_2"
 const Datas : Data[]=[ {
   name :'random 1',
