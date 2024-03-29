@@ -1,12 +1,12 @@
-import React from 'react'
 import List from './list'
+import Star from './star';
 
 function Design4() {
   return (
     <div className=' p-6 rounded-2xl w-[40rem]  bg-white '>
       <p className='font-bold'>Overall rating</p>
       <div className='mt-2'>
-        <p>5 starts</p>
+        <Star/>
         <p>Click to rate</p>
       </div>
       <div className='mt-4'>
