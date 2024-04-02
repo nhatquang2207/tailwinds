@@ -1,16 +1,15 @@
 import React from "react";
-
 interface data {
   name: string;
   job: string;
   avatar: string;
   tags: string[];
 }
-const datas: data[] = [
+export const datas: data[] = [
   {
     name: "A",
     job: "a",
-    avatar: "https://placewaifu.com/image/420",
+    avatar: " https://placewaifu.com/image/400",
     tags: ["Html"],
   },
   {
@@ -38,8 +37,17 @@ const datas: data[] = [
     tags: ["Html", "Css", "Js"],
   },
 ];
-
-function Info() {
+function Info({ datas }) {
+  // const [query, setQuery] = useState("");
+  // const handleFilter = (e) => {
+  //   setQuery(e.target.value);
+  // };
+  // const filter =
+  //   query.length > 0
+  //     ? datas.filter((user) => {
+  //         return user.name.toLowerCase().includes(query.toLowerCase());
+  //       })
+  //     : datas;
   return (
     <div className="mt-6">
       {datas.map((item) => (

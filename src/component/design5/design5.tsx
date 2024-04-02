@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Info from "./info";
-
 const data = ["Reputation", "New user", "Voters", "Editors", "Moderators"];
+import {datas} from './info'
+
 function Design5() {
+  const [query, setQuery] = useState("");
+  const handleFilter = (e) => {
+    setQuery(e.target.value);
+  };
+  const filter = datas.filter((user) => {
+    return user.name.toLowerCase().includes(query.toLowerCase());
+  });
   return (
     <div className="bg-blue-400 mt-24 p-16 ">
       <p className="text-2xl font-bold">Users</p>
@@ -11,7 +19,9 @@ function Design5() {
           <input
             className="  border-2 border-gray-400 pl-8"
             type="text"
+            value={query}
             placeholder="Search users "
+            onChange={handleFilter}
           />
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +46,7 @@ function Design5() {
         </div>
       </div>
       <div>
-        <Info />
+        <Info  datas={filter}/>
       </div>
     </div>
   );
