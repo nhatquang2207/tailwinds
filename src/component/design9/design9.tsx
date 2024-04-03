@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState } from "react";
 interface data {
   icon: ReactNode;
   name: string;
@@ -149,6 +149,7 @@ const datas: data[] = [
   },
 ];
 function Design9() {
+  const [index, setIndex] = useState(false);
   return (
     <div className="bg-blue-400 p-16 mt-16 w-[60rem]">
       <div className="relative flex items-center">
@@ -170,13 +171,14 @@ function Design9() {
             d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
           />
         </svg>
-        <div className=" absolute right-16  items-center  ">
+        <button className=" absolute right-16  items-center  ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
+            onClick={() => setIndex(!index)}
             className="w-6 h-6  ">
             <path
               strokeLinecap="round"
@@ -184,13 +186,14 @@ function Design9() {
               d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
             />
           </svg>
-        </div>
+        </button>
         <div className="justify-center items-center right-0  absolute bg-purple-500 rounded-full">
           <p className="p-4 ">IG</p>
         </div>
       </div>
       <h1 className="font-bold mt-12 text-3xl">Account</h1>
-      <div className="mt-10 ml-5 space-y-2">
+      <div
+        className={`mt-10 ml-5 space-y-2 ${ index ? "opacity-0" : "opacity-100"}`}>
         {datas.map((item) => (
           <div>
             <div className=" flex items-center justify-between hover:bg-slate-600 p-3 rounded-2xl">
