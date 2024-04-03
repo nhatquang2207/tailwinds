@@ -38,16 +38,7 @@ export const datas: data[] = [
   },
 ];
 function Info({ datas }) {
-  // const [query, setQuery] = useState("");
-  // const handleFilter = (e) => {
-  //   setQuery(e.target.value);
-  // };
-  // const filter =
-  //   query.length > 0
-  //     ? datas.filter((user) => {
-  //         return user.name.toLowerCase().includes(query.toLowerCase());
-  //       })
-  //     : datas;
+
   return (
     <div className="mt-6">
       {datas.map((item) => (
