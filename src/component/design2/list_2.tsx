@@ -18,3 +18,4 @@ const List_2 : React.FC<Data> = ({name,icon,color}) =>
    )
 }
 export default List_2;
+  
